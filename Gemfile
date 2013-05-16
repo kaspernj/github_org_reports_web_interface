@@ -10,8 +10,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'sass'
 gem 'resque'
-gem 'baza', :path => "/Users/kaspernj/Dev/Ruby/baza"
-gem 'github_org_reports', :path => "/Users/kaspernj/Dev/Ruby/github_org_reports"
+gem 'baza', '>= 0.0.10'
+gem 'github_org_reports'
 
 # Gems used only for assets and not required
 # in production environments by default.
