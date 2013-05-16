@@ -1,0 +1,24 @@
+%h1= _("Overview")
+
+.box-small
+  %h3.box-title= _("Actions")
+  = button_to _("Run update"), overview_update_path
+
+%br
+
+- GithubOrgReportsHelper.instance do |data|
+  .overview
+    %table
+      %thead
+        %tr
+          %th= _("Pull Request")
+          %th= _("Date")
+          - data[:ob].list(:Organization) do |org|
+            %th.org= org.name
+      %tbody
+        - data[:ob].list(:PullRequest, "orderby" => "date", "ordermode" => "desc") do |pr|
+          %tr
+            %td.pull_request= pr.title(:maxlength => 75)
+            %td.date= pr[:date] ? l(pr[:date], :format => :short) : "[no date]"
+            - data[:ob].list(:Organization) do |org|
+              %td.time= GithubOrgReports.secs_to_time(pr.total_time_for_org(:org => org))

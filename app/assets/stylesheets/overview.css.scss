@@ -1,0 +1,9 @@
+.overview{
+  > table{
+    width: 100%;
+    
+    thead tr th.org, tbody tr td.time{
+      text-align: right;
+    }
+  }
+}

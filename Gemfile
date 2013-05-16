@@ -8,7 +8,10 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 gem 'haml'
 gem 'haml-rails'
-
+gem 'sass'
+gem 'resque'
+gem 'baza', :path => "/Users/kaspernj/Dev/Ruby/baza"
+gem 'github_org_reports', :path => "/Users/kaspernj/Dev/Ruby/github_org_reports"
 
 # Gems used only for assets and not required
 # in production environments by default.

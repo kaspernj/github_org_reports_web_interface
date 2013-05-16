@@ -1,0 +1,25 @@
+%h1 Listing repositories
+
+%table
+  %tr
+    %th Name
+    %th User
+    %th Login
+    %th Password
+    %th
+    %th
+    %th
+
+  - @repositories.each do |repository|
+    %tr
+      %td= repository.name
+      %td= repository.user
+      %td= repository.login
+      %td= repository.password.present? ? _("Yes") : _("No")
+      %td= link_to 'Show', repository
+      %td= link_to 'Edit', edit_repository_path(repository)
+      %td= link_to 'Destroy', repository, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Repository', new_repository_path

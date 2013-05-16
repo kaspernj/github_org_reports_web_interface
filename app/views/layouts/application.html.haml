@@ -1,0 +1,22 @@
+!!! STRICT
+%html
+  %head
+    %title Github Org Reports Web Interface
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .main
+      .logo
+        Github Org Reports Web Interface
+      .menu
+        .menu_item
+          = link_to t("Overview"), overview_index_path
+        .menu_item
+          = link_to t("Repositories"), repositories_path
+      .content
+        .notice= flash[:notice] if flash[:notice]
+        .error= flash[:error] if flash[:error]
+        = yield
+      .bottom
+        Made by GFish

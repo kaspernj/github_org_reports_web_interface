@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @repository.name
+%p
+  %b User:
+  = @repository.user
+%p
+  %b Login:
+  = @repository.login
+%p
+  %b Password:
+  = @repository.password.present? ? t("Yes") : t("No")
+
+= link_to t('Edit'), edit_repository_path(@repository)
+\|
+= link_to t('Back'), repositories_path

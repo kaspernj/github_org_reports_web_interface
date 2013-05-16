@@ -1,5 +1,8 @@
 GithubOrgReportsWebInterface::Application.routes.draw do
-  get "overview#index"
+  resources :repositories
+
+  get "overview/index"
+  post "overview/update"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
