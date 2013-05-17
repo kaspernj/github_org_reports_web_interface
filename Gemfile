@@ -10,7 +10,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'sass'
 gem 'resque'
-gem 'baza', '>= 0.0.10'
+gem 'baza', '>= 0.0.11'
 gem 'github_org_reports'
 
 # Gems used only for assets and not required

@@ -30,7 +30,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     array_enumerator (0.0.3)
-    baza (0.0.10)
+    baza (0.0.11)
       array_enumerator
       datet
       knjrbfw
@@ -182,7 +182,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  baza (>= 0.0.10)
+  baza (>= 0.0.11)
   coffee-rails (~> 3.2.1)
   github_org_reports
   haml
